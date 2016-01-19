@@ -29,6 +29,12 @@ Party with `M-x party-mode RET`
 
 Go back to work with `M-x work-mode RET`
 
+## Shouts outs
+
+Thanks a million to [CRAPFACE](https://soundcloud.com/crapface) for letting me use a track from [this awesome mix](https://soundcloud.com/1833-fm/1833-mix-series-vol-78-crapface).
+
+:sparkling_heart: :two hearts: :notes:
+
 ## License
 
 MIT
