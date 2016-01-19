@@ -1,6 +1,6 @@
 # Emacs Party Mode
 
-I could describe, but why not just give it a try, instead?
+I could describe it, but why not just give it a try instead? Don't tell me you don't like to party.
 
 ## Pre-reqs
 
