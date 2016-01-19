@@ -6,6 +6,10 @@ I could describe it, but why not just give it a try instead? Don't tell me you d
 
 You must have installed and configured the Emacs Multimedia System ([EMMS](https://www.gnu.org/software/emms/)) for playing mp3s.
 
+Oh also you need [emacs-async](https://github.com/jwiegley/emacs-async).
+
+Both of the above can be installed via `M-x list-packages`.
+
 ## Installation
 
 Clone this repository and add the directory to your load path, like this:
