@@ -4,7 +4,7 @@ I could describe it, but why not just give it a try instead? Don't tell me you d
 
 ## Pre-reqs
 
-You must have installed and configured the Emacs multimedia system (EMMS) for playing mp3s.
+You must have installed and configured the Emacs Multimedia System ([EMMS](https://www.gnu.org/software/emms/)) for playing mp3s.
 
 ## Installation
 
