@@ -18,7 +18,7 @@
   (party-mode-step)
   (async-start
    (lambda ()
-     (sleep-for 0.1))
+     (sleep-for 0.05))
    (lambda (result)
      (if party-mode-engaged
          (party-loop)))))
