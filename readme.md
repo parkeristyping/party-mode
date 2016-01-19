@@ -2,6 +2,9 @@
 
 I could describe it, but why not just give it a try instead? Don't tell me you don't like to party.
 
+:sparkling_heart: :two_hearts: :notes:
+Thanks a million to [CRAPFACE](https://soundcloud.com/crapface) for letting me use a track from [this awesome mix](https://soundcloud.com/1833-fm/1833-mix-series-vol-78-crapface).
+
 ## Pre-reqs
 
 You must have installed and configured the Emacs Multimedia System ([EMMS](https://www.gnu.org/software/emms/)) for playing mp3s.
@@ -28,12 +31,6 @@ Then add this to your `.emacs` or `init.el` file:
 Party with `M-x party-mode RET`
 
 Go back to work with `M-x work-mode RET`
-
-## Shouts outs
-
-Thanks a million to [CRAPFACE](https://soundcloud.com/crapface) for letting me use a track from [this awesome mix](https://soundcloud.com/1833-fm/1833-mix-series-vol-78-crapface).
-
-:sparkling_heart: :two_hearts: :notes:
 
 ## License
 
