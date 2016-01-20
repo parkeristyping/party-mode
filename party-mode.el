@@ -1,4 +1,5 @@
-(setq party-mode-engaged nil)
+(setq party-mode-engaged-flag nil)
+(setq party-mode-music-path (concat (file-name-directory #$) "music/crapface.mp3"))
 
 (defun party-mode-random-face ()
   "Return the name of a random face from available faces."
@@ -26,14 +27,14 @@
 (defun party-mode ()
   "Partaaaayyyy!"
   (interactive)
-  (setq party-mode-engaged 't)
-  (emms-play-file (concat (file-name-directory #$) "party-music.mp3"))
+  (setq party-mode-engaged-flag 't)
+  (emms-play-file party-mode-music-path)
   (party-mode-loop))
 
 (defun stop-partying ()
   "Stop party mode and reset faces to defaults"
   (interactive)
-  (setq party-mode-engaged nil)
+  (setq party-mode-engaged-flag nil)
   (dolist (window (window-list))
     (set-buffer (window-buffer window))
     (buffer-face-set 'default))
