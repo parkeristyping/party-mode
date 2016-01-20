@@ -1,36 +1,36 @@
 (setq party-mode-engaged nil)
 
-(defun random-face ()
+(defun party-mode-random-face ()
   "Return the name of a random face from available faces."
   (nth (random (length (face-list))) (face-list)))
 
-(defun random-visible-buffer ()
+(defun party-mode-random-visible-buffer ()
   "Return a random visible buffer."
   (window-buffer (nth (random (length (window-list))) (window-list))))
 
-(defun party-mode-step ()
+(defun party-mode-update-random-buffer ()
   "Randomly update a visible buffer's face"
-  (set-buffer (random-visible-buffer))
-  (buffer-face-set (random-face)))
+  (set-buffer (party-mode-random-visible-buffer))
+  (buffer-face-set (party-mode-random-face)))
 
-(defun party-loop ()
+(defun party-mode-loop ()
   "Party loop"
-  (party-mode-step)
+  (party-mode-update-random-buffer)
   (async-start
    (lambda ()
      (sleep-for 0.05))
    (lambda (result)
      (if party-mode-engaged
-         (party-loop)))))
+         (party-mode-loop)))))
 
 (defun party-mode ()
   "Partaaaayyyy!"
   (interactive)
   (setq party-mode-engaged 't)
-  (emms-play-file (concat (file-name-directory #$) "party_music.mp3"))
-  (party-loop))
+  (emms-play-file (concat (file-name-directory #$) "party-music.mp3"))
+  (party-mode-loop))
 
-(defun work-mode ()
+(defun stop-partying ()
   "Stop party mode and reset faces to defaults"
   (interactive)
   (setq party-mode-engaged nil)
