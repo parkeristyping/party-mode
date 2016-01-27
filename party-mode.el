@@ -21,7 +21,7 @@
    (lambda ()
      (sleep-for 0.05))
    (lambda (result)
-     (if party-mode-engaged
+     (if party-mode-engaged-flag
          (party-mode-loop)))))
 
 (defun party-mode ()
