@@ -17,20 +17,20 @@ Both of the above can be installed via `M-x list-packages`.
 
 Clone this repository and add the directory to your load path, like this:
 
-`$ git clone git@github.com:parkeristyping/party_mode.git`
+`$ git clone git@github.com:parkeristyping/party-mode.git`
 
 Then add this to your `.emacs` or `init.el` file:
 
 ``` lisp
-(add-to-list 'load-path "~/path/to/party_mode")
-(load "party_mode.el")
+(add-to-list 'load-path "~/path/to/party-mode")
+(load "party-mode.el")
 ```
 
 ## Usage
 
 Party with `M-x party-mode RET`
 
-Go back to work with `M-x work-mode RET`
+Go back to work with `M-x stop-partying RET`
 
 ## License
 
