@@ -39,3 +39,5 @@
     (set-buffer (window-buffer window))
     (buffer-face-set 'default))
   (emms-stop))
+
+(provide 'party-mode)
