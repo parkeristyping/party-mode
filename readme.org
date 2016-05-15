@@ -1,7 +1,7 @@
 #+TITLE: Emacs Party Mode
 I could describe it, but why not just give it a try instead? Don't tell me you don't like to party.
-:sparkling_heart: :two_hearts: :notes:
-Thanks a million to [[https://soundcloud.com/crapface][CRAPFACE]] for letting me use a track from [[https://soundcloud.com/1833-fm/1833-mix-series-vol-78-crapface][this awesome mix]].
+
+💖💕🎶 Thanks a million to [[https://soundcloud.com/crapface][CRAPFACE]] for letting me use a track from [[https://soundcloud.com/1833-fm/1833-mix-series-vol-78-crapface][this awesome mix]].
 * Pre-reqs
 You must have installed and configured the Emacs Multimedia System ([[https://www.gnu.org/software/emms/][EMMS]]) for playing mp3s.
 
