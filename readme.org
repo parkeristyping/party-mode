@@ -4,18 +4,21 @@ I could describe it, but why not just give it a try instead? Don't tell me you d
 Thanks a million to [[https://soundcloud.com/crapface][CRAPFACE]] for letting me use a track from [[https://soundcloud.com/1833-fm/1833-mix-series-vol-78-crapface][this awesome mix]].
 * Pre-reqs
 You must have installed and configured the Emacs Multimedia System ([[https://www.gnu.org/software/emms/][EMMS]]) for playing mp3s.
+
 Oh also you need ([[https://github.com/jwiegley/emacs-async][emacs-async]]).
+
 Both of the above can be installed via ~M-x list-packages~.
 * Installation
-Clone this repository and add the directory to your load path, like this:
-~$ git clone git@github.com:parkeristyping/party-mode.git~
+Clone this repository and add the directory to your load path, like this: ~$ git clone git@github.com:parkeristyping/party-mode.git~.
+
 Then add this to your `.emacs` or `init.el` file:
 #+begin_src emacs-lisp
 (add-to-list 'load-path "~/path/to/party-mode")
 (load "party-mode.el")
 #+end_src
 * Usage
-Party with ~M-x party-mode RET~
-Go back to work with ~M-x stop-partying RET~
+Party with ~M-x party-mode RET~.
+
+Go back to work with ~M-x stop-partying RET~.
 * License
 MIT
