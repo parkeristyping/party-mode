@@ -1,8 +1,8 @@
 ;;; party-mode.el --- Ain't no party like an Emacs party -*- lexical-binding: t -*-
 
-;; Copyright © 2014 parkeristyping <parker.alford@gmail.com> 
+;; Copyright © 2016 parkeristyping <parker.alford@gmail.com>
 
-;; Author: 
+;; Author:
 ;; URL: https://github.com/parkeristyping/party-mode.el
 ;; Keywords: party, music, emms
 ;; Version: 0.1.0
@@ -27,13 +27,13 @@
 
 ;;; Usage:
 
-;; M-x party-mode 
+;; M-x party-mode
 ;; M-x stop-partying
 
 ;;; Code:
 
 (setq party-mode-engaged-flag nil)
-(setq party-mode-music-path (concat (file-name-directory #$) "music/crapface.mp3"))
+(setq party-mode-music-path (concat (file-name-directory (or load-file-name buffer-file-name)) "music/crapface.mp3"))
 
 (defun party-mode-random-face ()
   "Return the name of a random face from available faces."
