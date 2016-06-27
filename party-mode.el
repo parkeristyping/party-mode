@@ -39,21 +39,18 @@
   "Return the name of a random face from available faces."
   (nth (random (length (face-list))) (face-list)))
 
-(defun party-mode-random-visible-buffer ()
-  "Return a random visible buffer."
-  (window-buffer (nth (random (length (window-list))) (window-list))))
-
-(defun party-mode-update-random-buffer ()
-  "Randomly update a visible buffer's face"
-  (set-buffer (party-mode-random-visible-buffer))
-  (buffer-face-set (party-mode-random-face)))
+(defun party-mode-update-visible-buffers ()
+  "Randomly update faces of all visible buffers"
+  (dolist (buffer (window-list))
+    (set-buffer (window-buffer buffer))
+    (buffer-face-set (party-mode-random-face))))
 
 (defun party-mode-loop ()
   "Party loop"
-  (party-mode-update-random-buffer)
+  (party-mode-update-visible-buffers)
   (async-start
    (lambda ()
-     (sleep-for 0.05))
+     (sleep-for 0.03))
    (lambda (result)
      (if party-mode-engaged-flag
          (party-mode-loop)))))

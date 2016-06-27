@@ -1,5 +1,5 @@
 #+TITLE: Emacs Party Mode
-I could describe it, but why not just give it a try instead? Don't tell me you don't like to party.
+It's an Emacs party and you're invited. Checkout the [[https://youtu.be/k-ciw_dUhGk][video demo]].
 
 💖💕🎶 Thanks a million to [[https://soundcloud.com/crapface][CRAPFACE]] for letting me use a track from [[https://soundcloud.com/1833-fm/1833-mix-series-vol-78-crapface][this awesome mix]].
 
@@ -11,6 +11,7 @@ Oh also you need ([[https://github.com/jwiegley/emacs-async][emacs-async]]).
 Both of the above can be installed via ~M-x list-packages~.
 
 * Installation
+** Vanilla Emacs
 Clone this repository and add the directory to your load path, like this: ~$ git clone git@github.com:parkeristyping/party-mode.git~.
 
 Then add this to your `.emacs` or `init.el` file:
@@ -18,6 +19,11 @@ Then add this to your `.emacs` or `init.el` file:
 (add-to-list 'load-path "~/path/to/party-mode")
 (load "party-mode.el")
 #+end_src
+
+** Spacemacs
+I recently switched to Spacemacs. To install there, you can use the [[https://github.com/parkeristyping/.spacemacs.d/tree/master/layers/my-party-mode][party-mode layer]] I created, which will also handle EMMS setup.
+
+Note that when you upgrade Spacemacs, you'll need to move/delete the EMMS config files saved in =~/.emacs.d/=.
 
 * Usage
 Party with ~M-x party-mode RET~.
