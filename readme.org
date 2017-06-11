@@ -7,14 +7,14 @@ It's an Emacs party and you're invited. Checkout the [[https://youtu.be/k-ciw_dU
 ** Vanilla Emacs
 Clone this repository with e.g.  ~$ git clone git@github.com:parkeristyping/party-mode.git~.
 
-Then, make sure the party-mode repo you just cloned is in your Emacs load path, and require the package. You can do this by adding these lines to your `.emacs` or `.emacs.d/init.el` file:
+Then, make sure the party-mode repo you just cloned is in your Emacs load path, and require the package. You can do this by adding these lines to your ~.emacs~ or ~.emacs.d/init.el~ file:
 #+begin_src emacs-lisp
 (add-to-list 'load-path "~/path/to/party-mode")
 (require 'party-mode)
 #+end_src
 
 ** Spacemacs
-I'm a big fan of Spacemacs, which uses "layers" for package setup and configuration. So, I created one that encapsulates my personal configuration of party-mode. [[][Here]] it is if you'd like to take a look.
+I'm a big fan of Spacemacs, which uses "layers" for package setup and configuration. So, I created one that encapsulates my personal configuration of party-mode. [[https://github.com/parkeristyping/.spacemacs.d/tree/master/layers/my-party-mode][Here]] it is if you'd like to take a look.
 
 * Usage
 Party with ~M-x party-mode RET~.
@@ -24,31 +24,31 @@ Go back to work with ~M-x stop-partying RET~.
 * Music Configuration
 You have to do a bit of configuration to get the music playback part working.
 
-There are two variables that, if not `nil`, get called as functions when you start and stop party-mode. These are, respectively: `party-mode-start-music-fn` and `party-mode-stop-music-fn`.
+There are two variables that, if not ~nil~, get called as functions when you start and stop party-mode. These are, respectively: ~party-mode-start-music-fn~ and ~party-mode-stop-music-fn~.
 
-They default to `nil`, but you can set them to whatever you want to play music. Here are some examples:
+They default to ~nil~, but you can set them to whatever you want to play music. Below I describe two options I've been able to get working.
 
-** Use a shell command like `afplay`
-Probably the easiest way to get party-mode working is using a shell command for music playback. This can be done out-of-the-box with newish Macs using the `afplay` command. The rest of this example uses `afplay`, but it should be pretty much the same for any command line music player.
+** 1. Use a shell command like ~afplay~
+Probably the easiest way to get party-mode working is using a shell command for music playback. This can be done out-of-the-box with newish Macs using the ~afplay~ command. The rest of this example uses ~afplay~, but it should be pretty much the same for any command line music player.
 
-First, find a song that you want to party to, and make sure `afplay` is working by trying out `$ afplay /absolute/path/to/song.mp3`.
+First, find a song that you want to party to, and make sure ~afplay~ is working by trying out ~$ afplay /absolute/path/to/song.mp3~.
 
-Then, customize `party-mode-start-music-fn` in your `.emacs` (or `.emacs.d/init.el`, `.spacemacs.d/init.el`, etc):
+Then, customize ~party-mode-start-music-fn~ in your ~.emacs~ (or ~.emacs.d/init.el~, ~.spacemacs.d/init.el~, etc):
 
 #+begin_src emacs-lisp
 (setq party-mode-start-music-fn
   (lambda () (start-process "party-music" "*party-music*" "afplay" "/absolute/path/to/song.mp3")))
 #+end_src
 
-Finally, you'll also want to customize `party-mode-stop-music-fn` so the music cuts off when you're done partying:
+Finally, you'll also want to customize ~party-mode-stop-music-fn~ so the music cuts off when you're done partying:
 
 #+begin_src emacs-lisp
 (setq party-mode-stop-music-fn
   (lambda () (kill-process "party-music")))
 #+end_src
 
-** Use EMMS
-Another option would be to use an Emacs media package like [[https://www.gnu.org/software/emms/][EMMS]] for music playback. To do that, you'll first need to configure EMMS for audio playback. Once you've done that, you can customize `party-mode-start-music-fn` and `party-mode-stop-music-fn` using EMMS commands. Here's an example, which streams some suggested party music:
+** 2. Use EMMS
+Another option would be to use an Emacs media package like [[https://www.gnu.org/software/emms/][EMMS]] for music playback. To do that, you'll first need to configure EMMS for audio playback. Once you've done that, you can customize ~party-mode-start-music-fn~ and ~party-mode-stop-music-fn~ using EMMS commands. Here's an example, which streams some suggested party music:
 
 #+begin_src emacs-lisp
 (setq party-mode-start-music-fn
