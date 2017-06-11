@@ -31,9 +31,9 @@ They default to ~nil~, but you can set them to whatever you want to play music. 
 ** 1. Use a shell command like ~afplay~
 Probably the easiest way to get party-mode working is using a shell command for music playback. This can be done out-of-the-box with newish Macs using the ~afplay~ command. The rest of this example uses ~afplay~, but it should be pretty much the same for any command line music player.
 
-First, find a song that you want to party to, and make sure ~afplay~ is working by trying out ~$ afplay /absolute/path/to/song.mp3~.
+First, find a song that you want to party to, and make sure ~afplay~ is working by trying out ~$ afplay /absolute/path/to/song.mp3~ at the command line.
 
-Then, customize ~party-mode-start-music-fn~ in your ~.emacs~ (or ~.emacs.d/init.el~, ~.spacemacs.d/init.el~, etc):
+Once you confirm that's working, the next step is to customize ~party-mode-start-music-fn~ in your ~.emacs~ (or ~.emacs.d/init.el~, ~.spacemacs.d/init.el~, etc):
 
 #+begin_src emacs-lisp
 (setq party-mode-start-music-fn
