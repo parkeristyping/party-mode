@@ -1,12 +1,13 @@
 ;;; party-mode.el --- Ain't no party like an Emacs party -*- lexical-binding: t -*-
 
-;; Copyright © 2016 parkeristyping <parker.alford@gmail.com>
+;; Copyright © 2017 parkeristyping <parker.alford@gmail.com>
 
-;; Author:
+;; Author: Parker Lawrence
 ;; URL: https://github.com/parkeristyping/party-mode.el
 ;; Keywords: party, music, emms
-;; Version: 0.1.0
+;; Version: 0.1.1
 ;; Package-Requires: ((emacs "24") (emms "3.0") (async "1.6"))
+;; Package-Desc: Some functions and music to have a party in Emacs
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -31,7 +32,6 @@
 ;; M-x stop-partying
 
 ;;; Code:
-
 (setq party-mode-engaged-flag nil)
 (setq party-mode-music-path (concat (file-name-directory (or load-file-name buffer-file-name)) "music/crapface.mp3"))
 
