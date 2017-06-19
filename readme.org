@@ -19,7 +19,7 @@ I'm a big fan of Spacemacs, which uses "layers" for package setup and configurat
 * Usage
 Party with ~M-x party-mode RET~.
 
-Go back to work with ~M-x stop-partying RET~.
+Get back to work with ~M-x stop-partying RET~.
 
 * Music Configuration
 You have to do a bit of configuration to get the music playback part working.
